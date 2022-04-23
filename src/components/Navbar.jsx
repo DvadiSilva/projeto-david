@@ -1,8 +1,16 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import '../css/Navbar.css'
+import HamburguerMenu from "./HamburguerMenu";
 
 export default function Navbar(){
+    const [isHidden, setIshidden]= useState(true);
+
+    function toogleIsHidden(){
+        setIshidden( prevState=> !prevState);
+    }
+
     return(
         <header>
             <nav>
@@ -31,12 +39,13 @@ export default function Navbar(){
                         <NavLink to="/">Cabelopédia</NavLink>
                     </li>
                     <li>
-                        <button type="button" className="hamburguerBtn">
+                        <button type="button" className="hamburguerBtn" onClick={toogleIsHidden}>
                             <img src="/images/toa/hamburguer-menu.png" alt="nav expandida"/>
                         </button>
                     </li>
                 </ul>
             </nav>
+            {!isHidden && <HamburguerMenu/>}
         </header>
     );
 }
