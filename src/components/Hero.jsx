@@ -4,14 +4,14 @@ import '../css/Hero.css'
 export default function Hero(){
 
     const sliderPics=[
-        "/images/slider pics/pic_1.png",
-        "/images/slider pics/pic_2.jpg",
-        "/images/slider pics/pic_3.jpg",
-        "/images/slider pics/pic_4.png",
-        "/images/slider pics/pic_5.png",
-        "/images/slider pics/pic_6.png",
-        "/images/slider pics/pic_7.png",
-        "/images/slider pics/pic_8.png"
+        "/images/slider_pics/pic_1.png",
+        "/images/slider_pics/pic_2.jpg",
+        "/images/slider_pics/pic_3.jpg",
+        "/images/slider_pics/pic_4.png",
+        "/images/slider_pics/pic_5.png",
+        "/images/slider_pics/pic_6.png",
+        "/images/slider_pics/pic_7.png",
+        "/images/slider_pics/pic_8.png"
     ]
 
     const [position, setPosition]= useState(0);

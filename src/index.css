@@ -10,6 +10,11 @@ body {
   margin: 0 auto;
 }
 
+html, body {
+  overflow-y:auto;
+  height:100%;
+}
+
 body::after{
   content: "";
   background-image: url("/public/images/toa/hexagon_background.jpg");
