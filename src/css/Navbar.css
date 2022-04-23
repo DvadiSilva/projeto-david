@@ -55,7 +55,7 @@ nav a:hover{
 
 @media screen and (min-width:650px){
     nav h1{
-        max-width:20%;
+        max-width:15%;
     }
 }
 
@@ -66,5 +66,7 @@ nav a:hover{
     .hamburguerBtn{
         display: none;
     }
-
+    .hamburguerMenu__list {
+        display: none;
+    }
 }
