@@ -1,0 +1,38 @@
+.sobre__nos{
+    margin: 0 3vw;
+}
+
+.sobre__nos h2{
+    margin:10vh 0;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.sobre__nos__container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+.sobre__nos__img{
+    max-width: 30vw;
+}
+.sobre__nos__text{
+    margin:0 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+@media screen and (min-width: 900px){
+    .sobre__nos__container{
+        display:flex;
+        flex-direction: row;
+        border:1px solid #111;
+        margin: 3vw;
+    }
+}
+@media screen and (min-width: 1920px){
+    .sobre__nos__img{
+        width: 10vw;
+    }
+}

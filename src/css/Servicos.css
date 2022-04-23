@@ -38,6 +38,7 @@
     }
     .servicos__item{
         flex-direction: column;
+        margin-bottom:0;
     }
     .servicos__img__container{
         margin-right:0;
