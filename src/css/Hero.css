@@ -1,10 +1,21 @@
 .hero{
-    background:var(--color_1);
     display: flex;
     justify-content: center;
     position: relative;
     align-items: center;
     height: 30vh;
+}
+
+.hero::after{
+    content: "";
+    background:var(--color_1);
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -10;
 }
 
 .hero img{

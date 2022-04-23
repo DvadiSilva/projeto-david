@@ -1,11 +1,13 @@
 nav{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 nav ul{
     display: flex;
     align-items:center;
     text-transform: uppercase;
+    padding: 0;
+    margin:0
 }
 
 .nav__list__item{
@@ -14,7 +16,6 @@ nav ul{
 
 nav li {
     list-style-type: none;
-    margin: 1vw;
     text-align: center;
 }
 
@@ -50,7 +51,8 @@ nav a:hover{
 }
 
 .hamburguerMenu__list {
-    display: inline;
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (min-width:650px){
@@ -68,5 +70,8 @@ nav a:hover{
     }
     .hamburguerMenu__list {
         display: none;
+    }
+    nav li {
+        margin: 0 1vw ;
     }
 }

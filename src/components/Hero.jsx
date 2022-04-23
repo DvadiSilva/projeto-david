@@ -5,7 +5,7 @@ export default function Hero(){
 
     const sliderPics=[
         "/images/slider pics/pic_1.png",
-        "/images/slider pics/pic_2.png",
+        "/images/slider pics/pic_2.jpg",
         "/images/slider pics/pic_3.jpg",
         "/images/slider pics/pic_4.png",
         "/images/slider pics/pic_5.png",

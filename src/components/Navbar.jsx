@@ -16,7 +16,7 @@ export default function Navbar(){
             <nav>
                 <h1>
                     <NavLink to="/">
-                        <img src="/images/logo/Dvadi_logo-preto.jpeg" alt="logo" className="logo"/>
+                        <img src="/images/logo/Dvadi_logo-preto.png" alt="logo" className="logo"/>
                     </NavLink>
                 </h1>
                 <ul>
