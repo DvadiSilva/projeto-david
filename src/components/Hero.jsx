@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../css/Hero.css'
 
 export default function Hero(){
 
@@ -23,10 +24,12 @@ export default function Hero(){
         setPosition(prevState=> prevState===sliderPics.length-1? 0: prevState+1);
     }
 
+    setInterval(nextImage, 1000*7);
+
     return(
-        <div>
+        <div className="hero">
             <img src={sliderPics[position]} alt="imagem do slider"/>
-            <div>
+            <div className="hero__container">
                 <button type="button" onClick={prevImage}>&lt;</button>
                 <button type="button" onClick={nextImage}>&gt;</button>
             </div>

@@ -1,0 +1,39 @@
+.hero{
+    background:var(--color_1);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    height: 30vh;
+}
+
+.hero img{
+    max-height:100%;
+    max-width: 100%;
+}
+
+.hero__container{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hero button{
+    background: none;
+    border: none;
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 900px){
+    .hero{
+        height:90vh;
+    }
+}
+@media screen and (min-width: 1920px){
+    .hero{
+        height:30vh;
+    }
+}
