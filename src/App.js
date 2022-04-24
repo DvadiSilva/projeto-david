@@ -6,6 +6,7 @@ import Marcacoes from './components/Marcacoes';
 import Precos from './components/Precos';
 
 import Navbar from './components/Navbar';
+import Media from './components/Media';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/marcacoes" element={<Marcacoes/>}></Route>
           <Route path="/precos" element={<Precos/>}></Route>
         </Routes>
+        <Media/>
       </div>
     </BrowserRouter>
   );

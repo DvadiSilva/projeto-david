@@ -1,0 +1,13 @@
+.media{
+    display: flex;
+    justify-content: center;
+}
+
+.media a{
+    margin: 5vw;
+}
+
+.media img{
+    width: 5vw;
+    max-width: 30px;
+}
