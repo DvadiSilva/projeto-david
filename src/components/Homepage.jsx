@@ -1,3 +1,4 @@
+import Contactos from "./Contactos";
 import Hero from "./Hero";
 import Servicos from "./Servicos";
 import SobreNos from "./SobreNos";
@@ -8,6 +9,7 @@ export default function Homepage(){
             <Hero/>
             <Servicos/>
             <SobreNos/>
+            <Contactos/>
         </main>
     );
 }
