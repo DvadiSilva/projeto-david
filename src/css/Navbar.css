@@ -74,6 +74,10 @@ nav a:hover{
     background-size: 30px;
 }
 
+.hamburguerMenu__list a:hover{
+    color:var(--color_4); 
+}
+
 @media screen and (min-width:650px){
     nav h1{
         max-width:15%;
