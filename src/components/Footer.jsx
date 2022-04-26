@@ -14,6 +14,8 @@ export default function Footer(){
                     <img src="images/media/twitter.png" alt="twitter"/>
                 </a>
             </div>
+            <p>Desenvolvido por: David Silva Vieira</p>
+            <p>Dvadi's 2022 | Todos os direitos reservados</p>
         </footer>
     );
 }
