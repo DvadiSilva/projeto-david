@@ -1,0 +1,57 @@
+main{
+    min-height: 50vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container, form{
+    margin:3vw;
+    border: 1vw solid #000;
+    background: var(--color_1);
+    position: relative;
+    z-index: 0;
+    color:var(--color_4);
+}
+
+.container:after, form::after{
+    content: "";
+    background-image: url("/public/images/toa/hexagon_background.jpg");
+    opacity: 0.1;
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -10;
+    background-repeat: repeat;
+    background-size: 30px;
+}
+
+form{
+    padding: 10vw;
+}
+
+label{
+    display: flex;
+    justify-content: space-between;
+}
+
+form button{
+    margin-top: 10vw;
+    width: 100%;
+}
+
+h2{
+    margin-top: 0;
+}
+
+.container :first-child{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.container :last-child{
+    margin: 5vw;
+}

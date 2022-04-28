@@ -21,7 +21,7 @@
 }
 .servicos__img__container{
     transform:rotate(45deg);
-    border:2px solid #111;
+    border:2px solid #000;
     overflow: hidden;
     margin-right:5vw;
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../css/Marcacoes.css';
 
 export default function Marcacoes(){
     const [value]= useState("default");
@@ -30,11 +31,16 @@ export default function Marcacoes(){
         
         setFormSubmitted(true);
     }
-    
+
     return(
         <main>
-            {formSubmitted? null: <h2>Faça a sua marcação aqui</h2>} 
-            {formSubmitted? <h3>{marcacao.nome}, a sua marcação para {marcacao.dia}, às {marcacao.horario} horas está em processamento, obrigado</h3>:
+            {formSubmitted? null: <h2>Faça a sua marcação aqui</h2>}
+            {formSubmitted?
+                <div className="container">
+                    <p>{marcacao.nome},</p>
+                    <p>a sua marcação para {marcacao.dia}, às {marcacao.horario} horas está em processamento, receberá uma mensagem com a confirmação para o número {marcacao.telefone}, obrigado</p>
+                </div>
+                :
                 (<form onSubmit={handleSubmit}>
                     <div>
                         <label>
@@ -45,7 +51,7 @@ export default function Marcacoes(){
                     <div>
                         <label>
                             Telemóvel
-                            <input type="tel" name="telefone" pattern="[0-9]{9}" minLength="9" maxLength="9"required onChange={handleChange}/>
+                            <input type="tel" name="telefone" pattern="[0-9]{9}" minLength="9" maxLength="9" required onChange={handleChange}/>
                         </label>
                     </div>
                     <div>
@@ -70,7 +76,7 @@ export default function Marcacoes(){
                     </div>
                     <div>
                         <label>
-                            <input type="date" name="calendario" 
+                            <input type="date" name="calendario" className="calendario"
                             min={mesAtual>9? `${anoAtual}-${mesAtual}-15`:`${anoAtual}-0${mesAtual}-15`}
                             max={mesAtual>9? `${anoAtual}-${mesAtual}-14`:`${anoAtual}-0${mesAtual}-14`}/>
                         </label>

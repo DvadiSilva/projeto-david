@@ -9,7 +9,6 @@
 .hero::after{
     content: "";
     background:var(--color_1);
-    content: "";
     position: absolute;
     top:0;
     left: 0;

@@ -27,7 +27,7 @@
     .sobre__nos__container{
         display:flex;
         flex-direction: row;
-        border:1px solid #111;
+        border:1px solid #000;
         margin: 3vw;
     }
 }
