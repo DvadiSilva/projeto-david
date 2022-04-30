@@ -6,6 +6,7 @@
 
 .servicos h3{
     color:var(--color_1);
+    transition: 1s;
 }
 
 .servicos__container{
@@ -24,6 +25,13 @@
     border:2px solid #000;
     overflow: hidden;
     margin-right:5vw;
+    transition: 0.5s;
+}
+.servicos__img__container:hover{
+    transform: scale(1.5);
+}
+.servicos h3:hover{
+    transform: rotate(360deg);
 }
 .servicos__img{
     width:10vw;

@@ -16,6 +16,7 @@
     display:flex;
     justify-content: space-between;
     align-items:center;
+    transition:0.5s;
 }
 
 .contactos__item h3{
@@ -26,7 +27,6 @@
     color:var(--color_5);
     font-size:small;
 }
-
 
 .contactos__iframe{
     display: flex;
@@ -49,7 +49,9 @@
         flex-direction: column;
         justify-content: flex-start;
     }
-    
+    .contactos__item:hover{
+        transform: scale(1.5);
+    }
     .contactos h2{
         margin: 10vh 0;
     }
