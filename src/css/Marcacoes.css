@@ -1,4 +1,4 @@
-main{
+.marcacoes main{
     min-height: 50vh;
     text-align: center;
     display: flex;
@@ -6,7 +6,7 @@ main{
     justify-content: center;
 }
 
-.container, form{
+.marcacoes .container, .marcacoes form{
     margin:3vw;
     border: 5px solid #000;
     background: var(--color_1);
@@ -15,7 +15,7 @@ main{
     color:var(--color_4);
 }
 
-.container:after, form::after{
+.marcacoes .container:after, .marcacoes form::after{
     content: "";
     background-image: url("/public/images/toa/hexagon_background.jpg");
     opacity: 0.1;
@@ -29,16 +29,16 @@ main{
     background-size: 30px;
 }
 
-form{
+.marcacoes form{
     padding: 10vw;
 }
 
-label{
+.marcacoes label{
     display: flex;
     justify-content: space-between;
 }
 
-form button{
+.marcacoes form button{
     margin-top: 10vw;
     border: 3px double #000;
     border-radius: 10%;
@@ -48,80 +48,80 @@ form button{
     transition: 0.5s;
 }
 
-form button:hover{
+.marcacoes form button:hover{
     transform: scale(2);
 }
 
-h2{
+.marcacoes h2{
     margin-top: 0;
 }
 
-.container :first-child{
+.marcacoes .container :first-child{
     font-weight: bold;
     font-size: x-large;
 }
 
-.container :last-child{
+.marcacoes .container :last-child{
     margin: 5vw;
 }
 
-select, input:not([type=date]){
+.marcacoes select, .marcacoes input:not([type=date]){
     width: 35vw;
     transition: width 2s;
 }
 
-input[type=text]:focus, input[type=email]:focus{
+.marcacoes input[type=text]:focus, .marcacoes input[type=email]:focus{
     width:67%;
 }
 
-.calendario{
+.marcacoes .calendario{
     align-items: center;
 }
 
 @media screen and (min-width:600px){
-    form{
+    .marcacoes form{
         padding: 5vw;
     }
 }
 
 @media screen and (min-width:900px){
-    label{
+    .marcacoes label{
         flex-direction: column;
         align-items: baseline;
     }
-    form{
+    .marcacoes form{
         padding: 3vw;
         min-width: 400px;
     }
-    select, input:not([type=date]){
+    .marcacoes select, .marcacoes input:not([type=date]){
         width: 100%;
         margin: 1vw 0;
     }
-    input[type=text]:focus, input[type=email]:focus{
+    .marcacoes input[type=text]:focus, .marcacoes input[type=email]:focus{
         width:100%;
     }
-    main{
+    .marcacoes main{
         align-items:center;
     }
-    form button{
+    .marcacoes form button{
         margin-top: 5vw;
     }
-    .container, form{
+    .marcacoes .container, .marcacoes form{
         margin: 0 0 3vw 0;
     }
 }
 
 @media screen and (min-width:1920px){
-    form{
+    .marcacoes form{
         padding: 1vw;
     }
-    form button{
+    .marcacoes form button{
         margin-top: 1vw;
     }
-    .container :last-child{
+    .marcacoes .container :last-child{
         margin: 2vw;
     }
-    main{
+    .marcacoes main{
         min-height: 25vh;
     }
 }

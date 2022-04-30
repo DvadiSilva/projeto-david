@@ -32,7 +32,7 @@ export default function Marcacoes(){
     }
 
     return(
-        <main>
+        <main className="marcacoes">
             {formSubmitted? null: <h2>Faça a sua marcação aqui</h2>}
             {formSubmitted?
                 <div className="container">
