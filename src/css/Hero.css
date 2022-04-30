@@ -25,9 +25,6 @@
 .hero__container{
     position: absolute;
     bottom:0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
 }
 
 .hero button{
@@ -35,6 +32,7 @@
     border: none;
     font-size: xx-large;
     font-weight: 700;
+    margin: 0 10vw;
 }
 
 @media screen and (min-width: 900px){
@@ -45,5 +43,8 @@
 @media screen and (min-width: 1920px){
     .hero{
         height:30vh;
+    }
+    .hero button{
+        margin: 0 3vw;
     }
 }

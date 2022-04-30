@@ -2,7 +2,6 @@ import { useState } from "react";
 import '../css/Marcacoes.css';
 
 export default function Marcacoes(){
-    const [value]= useState("default");
     const [formSubmitted, setFormSubmitted]= useState(false);
     const [mesAtual]= useState(new Date().getMonth()+1);
     const [anoAtual]= useState(new Date().getFullYear());
@@ -63,8 +62,8 @@ export default function Marcacoes(){
                     <div>
                         <label>
                             Semana do mês
-                            <select name="semana" required defaultValue={value} onChange={handleChange}>
-                                <option value="default" disabled>...</option>
+                            <select name="semana" required onChange={handleChange}>
+                                <option value="">...</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -75,7 +74,7 @@ export default function Marcacoes(){
                         </label>
                     </div>
                     <div>
-                        <label>
+                        <label className="calendario">
                             <input type="date" name="calendario" className="calendario"
                             min={mesAtual>9? `${anoAtual}-${mesAtual}-15`:`${anoAtual}-0${mesAtual}-15`}
                             max={mesAtual>9? `${anoAtual}-${mesAtual}-14`:`${anoAtual}-0${mesAtual}-14`}/>
@@ -84,8 +83,8 @@ export default function Marcacoes(){
                     <div>
                         <label>
                             Dia
-                            <select name="dia" required defaultValue={value} onChange={handleChange}>
-                                <option value="default" disabled>...</option>
+                            <select name="dia" required onChange={handleChange}>
+                                <option value="">...</option>
                                 <option value="Terça-feira">3ª Feira</option>
                                 <option value="Quarta-feira">4ª Feira</option>
                                 <option value="Quinta-feira">5ª Feira</option>
@@ -97,8 +96,8 @@ export default function Marcacoes(){
                     <div>
                         <label>
                             Horário
-                            <select name="horario" required defaultValue={value} onChange={handleChange}>
-                                <option value="default" disabled>...</option>
+                            <select name="horario" required onChange={handleChange}>
+                                <option value="">...</option>
                                 <option value="9">9:00h</option>
                                 <option value="10">10:00h</option>
                                 <option value="11">11:00h</option>
