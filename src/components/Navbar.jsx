@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 
 import '../css/Navbar.css'
 import HamburguerMenu from "./HamburguerMenu";
@@ -30,13 +31,13 @@ export default function Navbar(){
                         <NavLink to="/precos">Preços</NavLink>
                     </li>
                     <li className="nav__list__item">
-                        <NavLink to="/">Sobre Nós</NavLink>
+                        <NavHashLink smooth to="/#sobreNos">Sobre Nós</NavHashLink>
                     </li>
                     <li className="nav__list__item">
-                        <NavLink to="/">Contactos</NavLink>
+                        <NavHashLink smooth to="/#contactos">Contactos</NavHashLink>
                     </li>
                     <li className="nav__list__item">
-                        <NavLink to="/">Cabelopédia</NavLink>
+                        <NavHashLink smooth to="/#cabelopedia">Cabelopédia</NavHashLink>
                     </li>
                     <li>
                         <button type="button" className="hamburguerBtn" onClick={toogleIsHidden}>
@@ -45,7 +46,7 @@ export default function Navbar(){
                     </li>
                 </ul>
             </nav>
-            {!isHidden && <HamburguerMenu/>}
+            {!isHidden && <HamburguerMenu isHidden={toogleIsHidden}/>}
         </header>
     );
 }

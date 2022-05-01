@@ -2,7 +2,7 @@ import '../css/Contactos.css'
 
 export default function Contactos(){
     return(
-        <div className="contactos">
+        <div className="contactos" id="contactos">
             <h2>Contactos</h2>
             <div className="contactos__container">
                 <div className="contactos__item">

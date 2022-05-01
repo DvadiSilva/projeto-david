@@ -2,7 +2,7 @@ import '../css/SobreNos.css'
 
 export default function SobreNos(){
     return(
-        <div className="sobre__nos">
+        <div className="sobre__nos" id="sobreNos">
             <h2>Sobre Nós</h2>
             <div className="sobre__nos__container">
                 <img src="images/toa/sobre-nos.png" className="sobre__nos__img" alt="icon sobre nós"/>
