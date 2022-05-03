@@ -23,7 +23,7 @@ export default function HamburguerMenu(props){
                 <li>
                     <NavHashLink smooth to="/#cabelopedia">Cabelopédia</NavHashLink>
                 </li>
-                <li>
+                <li className="navCloseParent">
                     <button type="button" className="navClose" onClick={props.isHidden}>X</button>
                 </li>
             </ul>

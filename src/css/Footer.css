@@ -1,7 +1,8 @@
 footer{
-    background-color: var(--color_5);
+    background-color: var(--color_1);
     position: relative;
     z-index: 0;
+    line-height: 1.5;
 }
 
 footer::after{

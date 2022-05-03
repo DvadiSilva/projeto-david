@@ -6,8 +6,6 @@ nav ul{
     display: flex;
     align-items:center;
     text-transform: uppercase;
-    padding: 0;
-    margin:0
 }
 
 .nav__list__item{
@@ -15,12 +13,13 @@ nav ul{
 }
 
 nav li {
-    list-style-type: none;
     text-align: center;
+    margin: 1vw;
 }
 
 nav h1 {
     max-width:30%;
+    margin: .67em 0;
 }
 
 .logo{
@@ -89,9 +88,16 @@ nav a:hover{
     font-size:x-small;
 }
 
+.navCloseParent{
+    margin:0;
+}
+
 @media screen and (min-width:650px){
     nav h1{
         max-width:15%;
+    }
+    .hamburguerMenu__list{
+        width: 40%;
     }
 }
 

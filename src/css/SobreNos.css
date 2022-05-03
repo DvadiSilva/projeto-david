@@ -6,6 +6,7 @@
     margin:10vh 0;
     font-size: xx-large;
     text-align: center;
+    font-weight: 700;
 }
 
 .sobre__nos__container{
@@ -22,6 +23,14 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+.sobre__nos__text h3{
+    font-size: larger;
+    font-weight: bold;
+    margin: 1em;
+}
+.sobre__nos__text p{
+    margin: 1em;
 }
 @media screen and (min-width: 900px){
     .sobre__nos__container{

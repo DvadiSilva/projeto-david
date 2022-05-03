@@ -5,15 +5,16 @@ export default function Precos(){
         <main className="precos">
             <h2>Tabela de preços</h2>
             <div className="precos__container">
-                <table border={1}>
+                <table>
                     <thead>
                         <tr>
-                            <th rowSpan={2}>Nome</th>
+                            <th></th>
                             <th colSpan={3}>Cabelo</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
+                            <th>Nome</th>
                             <th>Curto (€)</th>
                             <th>Médio (€)</th>
                             <th>Comprido (€)</th>
@@ -116,7 +117,7 @@ export default function Precos(){
                         </tr>
                     </tfoot>
                 </table>
-                <table border={1}>
+                <table>
                     <thead>
                         <tr>
                             <th>Nome</th>
@@ -170,27 +171,27 @@ export default function Precos(){
                         </tr>
                         <tr>
                             <td>Aplicação de Acessórios (p/ unidade)</td>
-                            <td>4.50€</td>
+                            <td>4.50</td>
                         </tr>
                         <tr>
                             <td>Pack Extensões</td>
-                            <td>5.00€</td>
+                            <td>5.00</td>
                         </tr>
                         <tr>
                             <td>Limpeza Facial Profunda (75 min)</td>
-                            <td>30.00€</td>
+                            <td>30.00</td>
                         </tr>
                         <tr>
                             <td>Correcção Ridulas e Rugas (75 min)</td>
-                            <td>60.00€</td>
+                            <td>60.00</td>
                         </tr>
                         <tr>
                             <td>Manicure</td>
-                            <td>6.00€</td>
+                            <td>6.00</td>
                         </tr>
                         <tr>
                             <td>Pedicure</td>
-                            <td>15.00€</td>
+                            <td>15.00</td>
                         </tr>
                     </tbody>
                     <tfoot>
