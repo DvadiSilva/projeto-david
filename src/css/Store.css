@@ -1,5 +1,21 @@
-.store{
+.store .store__container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
+}
+
+.store .carrinhoBtn__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.store .carrinhoBtn{
+    width: 10vw;
+    border:none;
+    background: none;
+    max-width: 60px;
+}
+.store .carrinhoBtn img{
+    max-width: 100%;
 }

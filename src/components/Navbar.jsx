@@ -17,7 +17,7 @@ export default function Navbar(){
             <nav>
                 <h1>
                     <NavLink to="/">
-                        <img src="/images/logo/Dvadi_logo-preto.png" alt="logo" className="logo"/>
+                        <img src="/images/logo/Dvadi_logo-preto.png" alt="Dvadi's" className="logo"/>
                     </NavLink>
                 </h1>
                 <ul>
@@ -31,13 +31,13 @@ export default function Navbar(){
                         <NavLink to="/precos">Preços</NavLink>
                     </li>
                     <li className="nav__list__item">
-                        <NavHashLink smooth to="/#sobreNos">Sobre Nós</NavHashLink>
+                        <NavHashLink  to="/#sobreNos">Sobre Nós</NavHashLink>
                     </li>
                     <li className="nav__list__item">
-                        <NavHashLink smooth to="/#contactos">Contactos</NavHashLink>
+                        <NavHashLink to="/#contactos">Contactos</NavHashLink>
                     </li>
                     <li className="nav__list__item">
-                        <NavHashLink smooth to="/#cabelopedia">Cabelopédia</NavHashLink>
+                        <NavHashLink to="/#cabelopedia">Cabelopédia</NavHashLink>
                     </li>
                     <li>
                         <button type="button" className="hamburguerBtn" onClick={toogleIsHidden}>
