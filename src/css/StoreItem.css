@@ -4,9 +4,81 @@
     align-items: center;
     background: var(--color_5);
     margin: 1vw;
+    padding: 1vw;
     border: 5px solid #000;
+    position: relative;
+    z-index: 0;
+}
+
+.storeItem::after{
+    content: "";
+    background-image: url("/public/images/toa/hexagon_background.jpg");
+    opacity: 0.1;
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -10;
+    background-repeat: repeat;
+    background-size: 30px;
 }
 
 .storeItem img{
     max-width: 50%;
+}
+
+.storeItem .noCarrinho__container{
+    position: absolute;
+    top: 1vw;
+    right:2vw;
+    display: flex;
+    align-items: flex-start;
+}
+
+.storeItem .noCarrinho__container h4{
+    font-weight: 700;
+    color: var(--color_4);
+    font-size: large;
+}
+
+.storeItem .noCarrinho__container button{
+    background: none;
+    border:none;
+    font-size: x-small;
+    font-weight: 700;
+}
+
+.storeItem p{
+    margin: 1vh 0;
+}
+
+.storeItem .input__container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.storeItem .input__container input{
+    width: 30%;
+    text-align: center;
+    font-size: large;
+    border: none;
+    background: none;
+}
+
+.storeItem .input__container button{
+    border:none;
+    background: none;
+    padding: 0;
+    font-size: large;
+}
+
+@media screen and (min-width: 900px){
+    .storeItem{
+        margin: 10px;
+        padding: 10px;
+    }
+    .storeItem .noCarrinho__container{
+        right:1vw;
+    }
 }

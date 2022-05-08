@@ -71,7 +71,7 @@ export default function Store(){
                 }
             </div>
             <div>
-                <ul>
+                <ul className="carrinho__container">
                     {
                         carrinho.map((item, index)=>(
                             <li key={index}>
