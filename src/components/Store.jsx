@@ -6,14 +6,14 @@ import { useState } from "react";
 
 export default function Store(){
     const [carrinho, setCarrinho]= useState([]);
-    const [inputs, setInputs] = useState( Array(items.length).fill(0) );
+    const [inputs, setInputs] = useState( Array(items.length).fill(0));
 
 
     function handleClick(item, index){ //função para enviar items para o carrinho
         const carrinhoCopy= [...carrinho];
         const inputsCopy= [...inputs];
        
-        if(inputsCopy[index]>0 && inputsCopy[index]<item.quantidade){
+        if(inputsCopy[index]>0 && inputsCopy[index]<=item.quantidade){
 
             if((item.noCarrinho+inputsCopy[index]<=item.quantidade)){
                 
@@ -24,7 +24,6 @@ export default function Store(){
             }
             
             setCarrinho(carrinhoCopy);
-            console.log("Carrinho", carrinhoCopy);
         }
     }
 
@@ -36,10 +35,17 @@ export default function Store(){
             inputsCopy[index]= parseInt(event.target.value);
             
             setInputs(inputsCopy);
-            console.log("InputValue",inputsCopy);
         }
     }
 
+    function removeItem(index, item){   //função para remover items do carrinho
+        const carrinhoCopy= [...carrinho];
+
+        carrinhoCopy.splice(index, 1);
+        item.noCarrinho= item.noCarrinho-1;
+        
+        setCarrinho(carrinhoCopy);
+    }
 
     return(
         <main className="store">
@@ -63,6 +69,18 @@ export default function Store(){
                         />
                     ))
                 }
+            </div>
+            <div>
+                <ul>
+                    {
+                        carrinho.map((item, index)=>(
+                            <li key={index}>
+                                {item.nome}
+                                <button type="button" onClick={()=>removeItem(index, item)}>X</button>
+                            </li>
+                        ))
+                    }
+                </ul>
             </div>
         </main>
     );
