@@ -47,6 +47,15 @@ export default function Store(){
         setCarrinho(carrinhoCopy);
     }
 
+    function removeAllItems(id, item){
+        const carrinhoCopy= [...carrinho];
+
+        const newCarrinhoCopy= carrinhoCopy.filter(item=>item.id!==id);
+        item.noCarrinho= 0;
+
+        setCarrinho(newCarrinhoCopy);
+    }
+
     return(
         <main className="store">
             <div className="carrinhoBtn__container">{carrinho.length===0? null: carrinho.length}
@@ -66,6 +75,7 @@ export default function Store(){
                             noCarrinho={item.noCarrinho}
                             handleChange={(event)=>handleChange(index, event, item)}
                             handleClick={()=>handleClick(item, index)}
+                            removeAllItems={()=>removeAllItems(item.id, item)}
                         />
                     ))
                 }
