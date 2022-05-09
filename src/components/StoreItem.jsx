@@ -17,13 +17,6 @@ export default function StoreItem(props){
                 />
                 <button type="button" onClick={()=> props.handleClick(props.item)}>+</button>
             </div>
-            {props.noCarrinho>0?
-                <div className="noCarrinho__container">
-                    <h4>{props.noCarrinho}</h4>
-                    <button type="button" onClick={()=> props.removeAllItems(props.id, props.item) }>X</button>
-                </div>
-                : null
-            }
         </div>
     );
 }
