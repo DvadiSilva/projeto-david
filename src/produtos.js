@@ -5,7 +5,8 @@ export const items=[
         preco:10,
         img:"images/toa/picture-icon.png",
         quantidade:67,
-        noCarrinho:0
+        noCarrinho:0,
+        subtotal:0
     },
     {
         id:2,
@@ -13,15 +14,17 @@ export const items=[
         preco:20,
         img:"images/toa/picture-icon.png",
         quantidade:34,
-        noCarrinho:0
+        noCarrinho:0,
+        subtotal:0
     },
     {
         id:3,
         nome:"item3",
-        preco:13,
+        preco:13.5,
         img:"images/toa/picture-icon.png",
         quantidade:46,
-        noCarrinho:0
+        noCarrinho:0,
+        subtotal:0
     },
     {
         id:4,
@@ -29,7 +32,8 @@ export const items=[
         preco:15,
         img:"images/toa/picture-icon.png",
         quantidade:88,
-        noCarrinho:0
+        noCarrinho:0,
+        subtotal:0
     },
     {
         id:5,
@@ -37,6 +41,7 @@ export const items=[
         preco:7.5,
         img:"images/toa/picture-icon.png",
         quantidade:12,
-        noCarrinho:0
+        noCarrinho:0,
+        subtotal:0
     },
 ];

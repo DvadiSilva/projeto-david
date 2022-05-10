@@ -8,6 +8,8 @@ export default function Store(){
     const [carrinho, setCarrinho]= useState([]);
     const [inputs, setInputs] = useState( Array(items.length).fill(0));
     const [noCarrinho, setNoCarrinho]= useState(0);
+    const [subtotals, setSubtotals] = useState(items.map(item=> item.subtotal));
+    const [total, setTotal]= useState(subtotals.reduce((total, numeroAtual)=> total+ numeroAtual));
 
     function handleClick(item, index){ //função para enviar items para o carrinho
         const carrinhoCopy= [...carrinho];
@@ -30,7 +32,7 @@ export default function Store(){
                     }
                 }
             }
-            
+            calculateSubtotal(item);
             setCarrinho(carrinhoCopy);
         }
     }
@@ -49,10 +51,13 @@ export default function Store(){
     function addItem(item){     //função para add items ao carrinho
         const carrinhoCopy= [...carrinho];
 
-        item.noCarrinho= item.noCarrinho+1;
+        if(item.noCarrinho<item.quantidade){
+            item.noCarrinho= item.noCarrinho+1;
+            setNoCarrinho(prevState=> prevState+1);
+        }
 
+        calculateSubtotal(item);
         setCarrinho(carrinhoCopy);
-        setNoCarrinho(prevState=> prevState+1);
     }
 
     function removeItem(item, index){   //função para remover items do carrinho
@@ -68,7 +73,7 @@ export default function Store(){
             item.noCarrinho= item.noCarrinho-1;
             setNoCarrinho(prevState=> prevState-1);
         }
-
+        calculateSubtotal(item);
         setCarrinho(carrinhoCopy);
     }
 
@@ -85,13 +90,28 @@ export default function Store(){
 
         item.noCarrinho= 0;
 
+        calculateSubtotal(item);
         setCarrinho(newCarrinhoCopy);
+    }
+
+    function calculateSubtotal(item){ //função para calcular subtotal de cada item
+        if(item.noCarrinho!==0){
+            item.subtotal= item.noCarrinho*item.preco;
+            setSubtotals(items.map(item=> item.subtotal));
+        }else{
+            item.subtotal= 0;
+            setSubtotals(items.map(item=> item.subtotal));
+        }
+    }
+
+    function calculateTotal(){
+        setTotal(subtotals.reduce((total, numeroAtual)=> total+ numeroAtual));
     }
 
     return(
         <main className="store">
             <div className="carrinhoBtn__container">{noCarrinho===0? null: noCarrinho}
-                <button type="button" className="carrinhoBtn">
+                <button type="button" className="carrinhoBtn" onClick={()=>calculateTotal()}>
                     <img src="/images/toa/cart.png" alt="imagem carrinho"/>
                 </button>
             </div>
@@ -107,7 +127,6 @@ export default function Store(){
                             noCarrinho={item.noCarrinho}
                             handleChange={(event)=>handleChange(index, event, item)}
                             handleClick={()=>handleClick(item, index)}
-                            removeAllItems={()=>removeAllItems(item.id, item)}
                         />
                     ))
                 }
@@ -122,10 +141,12 @@ export default function Store(){
                                 <button type="button" onClick={()=>removeItem(item, index)}>-</button>
                                 {item.noCarrinho}
                                 <button type="button" onClick={()=>addItem(item)}>+</button>
+                                {item.preco*item.noCarrinho}€
                             </li>
                         ))
                     }
                 </ul>
+                <p>Total do carrinho:{subtotals.reduce((total, numeroAtual)=> total+ numeroAtual)}€</p>
             </div>
         </main>
     );
