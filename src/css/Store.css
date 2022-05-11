@@ -98,4 +98,16 @@
     .store .store__container{
         grid-template-columns: repeat(4, 1fr);
     }
+    .store .carrinho__container{
+        margin: 10px;
+    }
+    .store .total{
+        margin: 10px;
+    }
+    .store .carrinho__container li{
+        padding: 10px;
+    }
+    .store .carrinho__container .item__noCarrinho p{
+        padding: 10px 20px;
+    }
 }
