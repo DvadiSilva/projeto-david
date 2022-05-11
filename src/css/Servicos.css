@@ -8,6 +8,7 @@
 .servicos h3{
     color:var(--color_1);
     transition: 1s;
+    margin-top:1vw;
 }
 
 .servicos__container{

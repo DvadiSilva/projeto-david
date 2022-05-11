@@ -37,13 +37,12 @@
     background-size: 30px;
 }
 
-.precos td:first-of-type:not(.table__secundario){
+.precos td:first-of-type:not(.table__secundario, td:last-of-type){
     text-align: left;
     padding: 1px;
 }
 
 .precos td:last-of-type{
-    text-align: center;
     border-top: 0;
 }
 

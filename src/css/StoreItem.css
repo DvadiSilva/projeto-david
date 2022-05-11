@@ -28,29 +28,14 @@
     max-width: 50%;
 }
 
-.storeItem .noCarrinho__container{
-    position: absolute;
-    top: 1vw;
-    right:2vw;
-    display: flex;
-    align-items: flex-start;
-}
-
-.storeItem .noCarrinho__container h4{
-    font-weight: 700;
-    color: var(--color_4);
-    font-size: large;
-}
-
-.storeItem .noCarrinho__container button{
-    background: none;
-    border:none;
-    font-size: x-small;
-    font-weight: 700;
-}
-
 .storeItem p{
     margin: 1vh 0;
+}
+
+.storeItem h3{
+    text-align: center;
+    font-weight: bold;
+    color: var(--color_1);
 }
 
 .storeItem .input__container{
