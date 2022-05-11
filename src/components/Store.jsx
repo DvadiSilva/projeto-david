@@ -136,17 +136,26 @@ export default function Store(){
                     {
                         carrinho.map((item, index)=>(
                             <li key={index}>
-                                {item.nome}
-                                <button type="button" onClick={()=>removeAllItems(item.id, item)}>X</button>
-                                <button type="button" onClick={()=>removeItem(item, index)}>-</button>
-                                {item.noCarrinho}
-                                <button type="button" onClick={()=>addItem(item)}>+</button>
-                                {item.preco*item.noCarrinho}€
+                                <p className="item__nome">{item.nome}</p>
+                                <div>
+                                    <button type="button" className="trashBtn" onClick={()=>removeAllItems(item.id, item)}>
+                                        <img src="/images/toa/trash-icon.png" alt=""/>
+                                    </button>
+                                    <div className="item__noCarrinho">
+                                        <button type="button" onClick={()=>removeItem(item, index)}>-</button>
+                                        <p>{item.noCarrinho}</p>
+                                        <button type="button" onClick={()=>addItem(item)}>+</button>
+                                    </div>
+                                    <p className="item__subtotal">{item.preco*item.noCarrinho}€</p>
+                                </div>
                             </li>
                         ))
                     }
                 </ul>
-                <p>Total do carrinho:{subtotals.reduce((total, numeroAtual)=> total+ numeroAtual)}€</p>
+                {(subtotals.reduce((total, numeroAtual)=> total+ numeroAtual))!==0?
+                    <p className="total">Total do carrinho:<span>{subtotals.reduce((total, numeroAtual)=> total+ numeroAtual)}€</span></p>
+                    : null
+                }
             </div>
         </main>
     );
