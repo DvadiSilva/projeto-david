@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
-import { NavHashLink } from "react-router-hash-link";
 
-export default function HamburguerMenu(props){
+export default function HamburguerMenu(){
     return(
         <nav>
             <ul className="hamburguerMenu__list">
@@ -15,16 +14,13 @@ export default function HamburguerMenu(props){
                     <NavLink to="/precos">Preços</NavLink>
                 </li>
                 <li>
-                    <NavHashLink smooth to="/#sobreNos">Sobre Nós</NavHashLink>
+                    <a href="/#sobreNos">Sobre Nós</a>
                 </li>
                 <li>
-                    <NavHashLink smooth to="/#contactos">Contactos</NavHashLink>
+                    <a href="/#contactos">Contactos</a>
                 </li>
                 <li>
-                    <NavHashLink smooth to="/#cabelopedia">Cabelopédia</NavHashLink>
-                </li>
-                <li className="navCloseParent">
-                    <button type="button" className="navClose" onClick={props.isHidden}>X</button>
+                    <a href="/#cabelopedia">Cabelopédia</a>
                 </li>
             </ul>
         </nav>

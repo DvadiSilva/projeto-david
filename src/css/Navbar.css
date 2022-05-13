@@ -1,3 +1,25 @@
+header{
+    position: sticky;
+    top: 0;
+    background: var(--color_4);
+    z-index: 10;
+    border-bottom: 5px solid #000;
+}
+
+header::after{
+    content: "";
+    background-image: url("/public/images/toa/hexagon_background.jpg");
+    opacity: 0.1;
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -10;
+    background-repeat: repeat;
+    background-size: 30px;
+}
+
 nav{
     display: flex;
     justify-content: space-evenly;
@@ -32,10 +54,12 @@ nav h1 {
 nav a{
     text-decoration: none;
     color:var(--color_5);
+    transition: 0.5s;
 }
 
 nav a:hover{
-    color:var(--color_1); 
+    color:var(--color_1);
+    transform: scale(1.5);
 }
 
 .hamburguerBtn{
@@ -53,10 +77,11 @@ nav a:hover{
     flex-direction: column;
     width: 50%;
     position: absolute;
-    top:20%;
+    top:100%;
     z-index: 10;
-    background-color: var(--color_1);
+    background-color: var(--color_4);
     border: 5px solid #000;
+    border-top:none;
 }
 
 .hamburguerMenu__list::after{
@@ -73,23 +98,13 @@ nav a:hover{
     background-size: 30px;
 }
 
+.hamburguerMenu__list a{
+    transition: 0.5s;
+}
+
 .hamburguerMenu__list a:hover{
-    color:var(--color_4);
-}
-
-.navClose{
-    position: absolute;
-    top:0;
-    right: 0;
-    background: none;
-    border:none;
-    color:var(--color_4);
-    font-weight: 700;
-    font-size:x-small;
-}
-
-.navCloseParent{
-    margin:0;
+    color:var(--color_1);
+    transform: scale(1.5);
 }
 
 @media screen and (min-width:650px){
