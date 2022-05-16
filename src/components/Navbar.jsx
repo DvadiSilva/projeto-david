@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import '../css/Navbar.css'
+import { items } from "../produtos";
 import HamburguerMenu from "./HamburguerMenu";
 
 export default function Navbar(){
@@ -9,6 +10,11 @@ export default function Navbar(){
 
     function toogleIsHidden(){
         setIshidden( prevState=> !prevState);
+    }
+
+    function resetStore(){
+        items.map(item=> item.noCarrinho=0);
+        items.map(item=> item.subtotal=0);
     }
 
     return(
@@ -21,7 +27,7 @@ export default function Navbar(){
                 </h1>
                 <ul>
                     <li className="nav__list__item">
-                        <NavLink to="/store">Loja Online</NavLink>
+                        <NavLink to="/store" onClick={()=>resetStore()}>Loja Online</NavLink>
                     </li>
                     <li className="nav__list__item">
                         <NavLink to="/marcacoes">Marcações</NavLink>
