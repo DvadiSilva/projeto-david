@@ -5,7 +5,7 @@ export default function SobreNos(){
         <div className="sobre__nos" id="sobreNos">
             <h2>Sobre Nós</h2>
             <div className="sobre__nos__container">
-                <img src="images/toa/sobre-nos.png" className="sobre__nos__img" alt="icon sobre nós"/>
+                <img src="images/toa/sobre-nos.png" className="sobre__nos__img" alt=""/>
                 <div className="sobre__nos__text">
                     <h3>Dvadi's</h3>
                     <p>Fundado em 1998, por Dvadi Silva, empresário e dono das empresas DSV.</p>

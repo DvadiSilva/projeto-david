@@ -163,7 +163,7 @@ export default function Store(){
             {!mbWaySubmitted?
                 <div className="carrinhoBtn__container">{noCarrinho===0? null: noCarrinho}
                     <button type="button" className="carrinhoBtn" onClick={()=>calculateTotal()}>
-                        <img src="/images/toa/cart.png" alt="imagem carrinho"/>
+                        <img src="/images/toa/cart.png" alt="carrinho"/>
                     </button>
                 </div>
                 :
@@ -195,7 +195,7 @@ export default function Store(){
                                         <p className="item__nome">{item.nome}</p>
                                         <div>
                                             <button type="button" className="trashBtn" onClick={()=>removeAllItems(item.id, item)}>
-                                                <img src="/images/toa/trash-icon.png" alt=""/>
+                                                <img src="/images/toa/trash-icon.png" alt="remover todos os items"/>
                                             </button>
                                             <div className="item__noCarrinho">
                                                 <button type="button" onClick={()=>removeItem(item, index)}>-</button>

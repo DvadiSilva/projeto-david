@@ -31,7 +31,7 @@ export default function Hero(){
 
     return(
         <div className="hero">
-            <img src={sliderPics[position]} alt="imagem do slider"/>
+            <img src={sliderPics[position]} alt=""/>
             <div className="hero__container">
                 <button type="button" onClick={prevImage}>&lt;</button>
                 <button type="button" onClick={nextImage}>&gt;</button>
