@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import '../css/Hero.css'
 
 export default function Hero(){
@@ -24,7 +24,10 @@ export default function Hero(){
         setPosition(prevState=> prevState===sliderPics.length-1? 0: prevState+1);
     }
 
-    setInterval(nextImage, 1000*7);
+    useEffect(()=>{
+        const autoSlider= setInterval(nextImage, 1000*7);
+        return ()=> clearInterval(autoSlider);
+    }, []);
 
     return(
         <div className="hero">
