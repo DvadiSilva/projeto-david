@@ -3,10 +3,10 @@ export default function Pagamento(props){
         <div>
             {
                 props.metodoEscolhido?
-                <div>
+                <div className="metodoEscolhido">
                     {
                         props.pagamentoData.metodo==="PayPal" || props.pagamentoData.metodo==="ApplePay"?
-                        <p>Em breve...</p>
+                        <p>{props.pagamentoData.metodo} Indisponível</p>
                         : 
                         props.pagamentoData.metodo==="Multibanco"?
                         <div>

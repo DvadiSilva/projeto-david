@@ -124,7 +124,7 @@
     .marcacoes .container :last-child{
         margin: 2vw;
     }
-    .marcacoes main{
+    .marcacoes{
         min-height: 25vh;
     }
 }

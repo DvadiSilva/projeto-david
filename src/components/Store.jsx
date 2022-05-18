@@ -124,7 +124,7 @@ export default function Store(){
         setPagamento(prevState=> !prevState);
     }
 
-    function handleChangePagamento(event){  //verificar a escolha do método de pagamento
+    function handleChangePagamento(event){  //aguardar a escolha do método de pagamento
         const {name, value, type}= event.target;
 
         setPagamentoData(prevState=>({
@@ -133,14 +133,14 @@ export default function Store(){
         }));
     }
 
-    function handleSubmit(event){
+    function handleSubmit(event){   // a escolha do método de pagamento
         event.preventDefault();
         
         randomNumber(100, 1000);
         setMetodoEscolhido(true);
     }
 
-    function randomNumber(min, max){
+    function randomNumber(min, max){    //calculo da referência multibanco
         setReferencia(
             (Math.floor(Math.random()*(max - min)) + min)+" "+
             (Math.floor(Math.random()*(max - min)) + min)+" "+
@@ -148,11 +148,11 @@ export default function Store(){
         );
     }
 
-    function handleChangeNumero(event){
+    function handleChangeNumero(event){ //guardar o número inserido
         setNumero(event.target.value);
     }
 
-    function handleSubmitNumero(event){
+    function handleSubmitNumero(event){ //verificar o número inserido
         event.preventDefault();
         
         setMbWaySubmitted(true);
@@ -219,12 +219,12 @@ export default function Store(){
                 :
                 <div>
                     {!mbWaySubmitted?
-                        <div>
-                            <button type="button" onClick={()=>calculateTotal()}>voltar</button>
+                        <div className="pagamento__container">
+                            <button type="button" className="voltarBtn" onClick={()=>calculateTotal()}>&lt;-</button>
                             <div>
-                                <form onSubmit={handleSubmit}>
+                                <form onSubmit={handleSubmit} className="pagamento__form">
                                     <p>Escolha o método de pagamento</p>
-                                    <div>
+                                    <div className="pagamento__metodos">
                                         <label>
                                             Multibanco
                                             <input 
@@ -295,7 +295,10 @@ export default function Store(){
                             />
                         </div>
                         :
-                        <p>A aguardar Pagamento de {numero}...</p>
+                        <div className="pagamento__espera">
+                            <div className="loader"></div>
+                            <p>A aguardar Pagamento de {numero}...</p>
+                        </div>
                     }
                 </div>
             }
