@@ -3,6 +3,7 @@ import Contactos from "./Contactos";
 import Hero from "./Hero";
 import Servicos from "./Servicos";
 import SobreNos from "./SobreNos";
+import BackToTop from "./BackToTop";
 
 export default function Homepage(){
     return(
@@ -12,6 +13,7 @@ export default function Homepage(){
             <SobreNos/>
             <Contactos/>
             <CabeloPedia/>
+            <BackToTop/>
         </main>
     );
 }

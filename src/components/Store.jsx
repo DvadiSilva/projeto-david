@@ -3,6 +3,7 @@ import StoreItem from "./StoreItem.jsx";
 import '../css/Store.css';
 import { useState } from "react";
 import Pagamento from "./Pagamento.jsx";
+import BackToTop from "./BackToTop";
 
 
 export default function Store(){
@@ -160,6 +161,7 @@ export default function Store(){
 
     return(
         <main className="store">
+            <BackToTop/>
             {!mbWaySubmitted?
                 <div className="carrinhoBtn__container">{noCarrinho===0? null: noCarrinho}
                     <button type="button" className="carrinhoBtn" onClick={()=>calculateTotal()}>

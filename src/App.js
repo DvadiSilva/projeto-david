@@ -7,14 +7,12 @@ import Precos from './components/Precos';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import BackToTop from './components/BackToTop';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Navbar/>
-        <BackToTop/>
         <Routes>
           <Route path="/" element={<Homepage/>}></Route>
           <Route path="/store" element={<Store/>}></Route>
