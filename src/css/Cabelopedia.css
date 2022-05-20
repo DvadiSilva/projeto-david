@@ -1,0 +1,60 @@
+.cabelopedia{
+   margin: 0 3vw;
+}
+
+.cabelopedia h2{
+    margin:10vh 0;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.cabelopedia span{
+    font-weight: bold;
+}
+
+.cabelopedia h3{
+    font-size: x-large;
+    margin: 5vh 0;
+    font-weight: bold;
+}
+
+.cabelopedia .introducao{
+    text-align: center;
+}
+
+.cabelopedia .introducao p{
+    margin:3vw 0;
+}
+
+.cabelopedia img{
+    max-width: 100%;
+    border-radius: 2%;
+}
+
+.cabelopedia span:not(.introducao span){
+    display: block;
+    margin: 2vh 0;
+}
+
+.cabelopedia p:not(.introducao p){
+    text-align: justify;
+}
+
+@media screen and (min-width: 900px){
+    .cabelopedia p{
+        margin: 3vh 0;
+    }
+    .cabelopedia span:not(.introducao span){
+        display: inline;
+    }
+}
+
+@media screen and (min-width: 1920px){
+    .cabelopedia h3{
+        margin: 3vh 0;
+    }
+    .cabelopedia .introducao p{
+        margin: 1vw 0;
+    }
+}

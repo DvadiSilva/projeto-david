@@ -1,3 +1,4 @@
+import { CabeloPedia } from "./CabeloPedia";
 import Contactos from "./Contactos";
 import Hero from "./Hero";
 import Servicos from "./Servicos";
@@ -10,6 +11,7 @@ export default function Homepage(){
             <Servicos/>
             <SobreNos/>
             <Contactos/>
+            <CabeloPedia/>
         </main>
     );
 }
