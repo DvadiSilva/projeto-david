@@ -1,0 +1,32 @@
+.backToTop{
+    position: fixed;
+    bottom: 50%;
+    right: 5%;
+    z-index: 100;
+    width: 7vw;
+    height: 7vw;
+    background: var(--color_3);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    text-decoration: none;
+    color: var(--color_4);
+    box-sizing: border-box;
+    border: 3px solid #000;
+}
+
+.backToTop::after{
+    content: "";
+    background-image: url("/public/images/toa/hexagon_background.jpg");
+    opacity: 0.1;
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -10;
+    background-repeat: repeat;
+    background-size: 30px;
+}
