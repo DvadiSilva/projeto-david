@@ -51,7 +51,7 @@ export default function Navbar(){
                     </li>
                 </ul>
             </nav>
-            {!isHidden && <HamburguerMenu/>}
+            {!isHidden && <HamburguerMenu toogleIsHidden={toogleIsHidden}/>}
         </header>
     );
 }
